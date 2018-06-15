@@ -1,0 +1,18 @@
+public class Solution {
+    public boolean Find(int target, int [][] array) {
+    int row=array.length;
+    int clu=array[0].length;
+        int j=0;
+        for(int i=row-1;i>=0&&j<clu;){
+            if(array[i][j]==target)
+                return true;
+        if(array[i][j]>target)
+        {i--;
+            continue;}
+            if(array[i][j]<target)
+            {j++;
+            continue;}
+        }
+        return false;
+    }
+}
